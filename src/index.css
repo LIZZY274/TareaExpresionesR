@@ -50,10 +50,9 @@ ul {
   max-width: 100px;
   min-height: 100px;
   margin: 5em auto;
-  background-color: #fff;
+  background-color: #e8e8e8;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: rgba(0,0,0,0.45) 0 25px 20px -20px;
 }
 :is(.login,.signup) > div {
   position: relative;
@@ -73,7 +72,7 @@ ul {
 }
 
 .logo span {
-  color: #213ef1;
+  color: #fbfbfb;
 }
 
 .content-heading p{
@@ -99,14 +98,14 @@ form input:not(#terms,#remember) {
   margin: 0 0 20px;
   padding: 10px 15px;
   border-radius: 7px;
-  border: 1px solid var(--light-color);
+  border: 0px solid var(--light-color);
 }
 
 form input::placeholder {
   color: var(--light-color);
 }
 form button {
-  background-color: #eb3b5a;
+  background-color: #0c6f1c;
   color: white;
   width: 100%;
   margin: 30px 0;
