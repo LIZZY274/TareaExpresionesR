@@ -1,0 +1,205 @@
+
+:root {
+  --min-color: #5168f4;
+  --dark-color: #11152a;
+  --light-color: #d0d4ed;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+*,::before, ::after{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--dark-color);
+  background-color: #efefef;
+}
+a{
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: 400;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.wrapper>div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100px;
+  min-height: 100px;
+  margin: 5em auto;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(0,0,0,0.45) 0 25px 20px -20px;
+}
+:is(.login,.signup) > div {
+  position: relative;
+  flex: 1 0 50%;
+  padding: 50px;
+}
+.content-heading .y-style {
+  display: flex;
+  flex-direction: column;
+}
+.logo a {
+  display: inline-block;
+  margin-bottom: 60px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+.logo span {
+  color: #213ef1;
+}
+
+.content-heading p{
+  color: var(--light-color);
+}
+
+.content-from {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.welcome {
+  text-align: center;
+}
+
+/* lets hide sign up from first  */
+
+
+form input:not(#terms,#remember) {
+  font-family: inherit;
+  width: 100%;
+  outline: 0;
+  margin: 0 0 20px;
+  padding: 10px 15px;
+  border-radius: 7px;
+  border: 1px solid var(--light-color);
+}
+
+form input::placeholder {
+  color: var(--light-color);
+}
+form button {
+  background-color: #eb3b5a;
+  color: white;
+  width: 100%;
+  margin: 30px 0;
+  border: 0;
+  line-height: 42px;
+  border-radius: 7px;
+  font-weight: 700;
+  cursor: pointer;
+  /* we comment this so no bother rese
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out; 
+  */
+}
+button:hover{
+  background-color: #6f7dd7;
+}
+
+.afterform {
+  text-align: center;
+  margin-top: 20px;
+}
+form .check {
+  position: relative;
+  padding-left: 20px;
+  font-size: 12px;
+  float: left;
+}
+form .check input {
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+form .forgot {
+  float: right;
+  font-size: 12px;
+}
+
+form label a, .afterform a {
+  color: var(--min-color);
+}
+
+form :is(p, label) a:hover, .afterform a:hover {
+  border-bottom: 1px dotted;
+}
+
+
+
+
+@keyframes fade-in {
+  from {
+      opacity: 0;
+      transform: translate3d(0, 20%, 0);
+  }
+  to {
+      opacity: 1;
+  }
+}
+:is(.login-show, .signup-show) .y-style {
+  transform: translate3d(0,0,0);
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+  .wrapper>div {
+      flex-direction: row;
+      max-width: 800px;
+  }
+  .signup .content-heading .y-style {
+      height: 100%;
+      justify-content: space-between;
+  }
+  .content-from::before {
+      width: 200%;
+      transform: translate3d(-18%, -10%, 0);
+      -webkit-transform: translate3d(-18%, -10%, 0);
+  }
+  .welcome {
+      text-align: left;
+      margin: 5em 0 auto;
+  }
+  @keyframes move {
+      from {
+          opacity: 0;
+          transform: translate3d(0, -100%, 0);
+      }
+      to {
+          opacity: 1;
+      }
+  }
+}
